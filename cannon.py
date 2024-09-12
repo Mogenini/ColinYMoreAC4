@@ -23,7 +23,7 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 15
+        speed.x = (x + 200) / 15 #Se movieron valores para aumentar la velocidad de la bala del cañon en "x" y "y"
         speed.y = (y + 200) / 15
 
 
@@ -55,7 +55,7 @@ def move():
         print("Rand")
         targets.append(target)
 
-    for target in targets:
+    for target in targets:   #Se cambio velocidad de 0.5 a 1
         target.x -= 1
 
     if inside(ball):
@@ -74,6 +74,7 @@ def move():
     for target in targets:
         if not inside(target):
             #Aqui termina
+            #Regresa  a posicion inicial
             target.x = 200;
 
     ontimer(move, 50)
