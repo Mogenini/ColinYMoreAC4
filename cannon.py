@@ -52,6 +52,7 @@ def move():
     if randrange(40) == 0:
         y = randrange(-150, 150)
         target = vector(200, y)
+        print("Rand")
         targets.append(target)
 
     for target in targets:
@@ -72,7 +73,8 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
+            #Aqui termina
+            target.x = 200;
 
     ontimer(move, 50)
 
